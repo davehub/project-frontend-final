@@ -29,7 +29,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [user, setUser] = useState<{ username: string; role: 'admin' | 'user' } | null>(null);
 
-  const API_BASE_URL = 'http://localhost:5000/api';
+  const API_BASE_URL = 'https://backend-final-p3gk.onrender.com/api';
 
   useEffect(() => {
     const token = localStorage.getItem('userToken');
