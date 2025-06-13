@@ -8,6 +8,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import UserDashboard from './pages/UserDashboard';
 import EquipmentsManagementPage from './pages/EquipmentsManagementPage';
 import UsersManagementPage from './pages/UsersManagementPage';
+import CreateEquipmentPage from './pages/CreateEquipmentPage';
+import EquipmentDetailPage from './pages/EquipmentDetailPage';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import Navbar from './components/common/Navbar';
 import Sidebar from './components/common/Sidebar';
@@ -57,6 +59,24 @@ function App() {
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="/equipments/new"
+              element={
+                <ProtectedRoute adminOnly={true}> {/* Seuls les admins peuvent créer */}
+                  <CreateEquipmentPage />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/equipments/:id" // Route dynamique pour l'ID de l'équipement
+              element={
+                <ProtectedRoute> {/* Accessible par user si assigné, par admin toujours */}
+                  <EquipmentDetailPage />
+                </ProtectedRoute>
+              }
+            />
+            
             <Route
               path="/users"
               element={

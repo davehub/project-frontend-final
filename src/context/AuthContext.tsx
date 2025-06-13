@@ -8,6 +8,13 @@ interface JwtPayload {
   exp?: number; // Ajout de la propriété exp pour la date d'expiration du token
 }
 
+export interface AuthUser {
+  _id: string;
+  username: string;
+  email?: string;
+  role: 'user' | 'admin';
+}
+
 interface AuthContextType {
   isAuthenticated: boolean;
   isAdmin: boolean;
@@ -29,7 +36,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [user, setUser] = useState<{ username: string; role: 'admin' | 'user' } | null>(null);
 
-  const API_BASE_URL = 'https://backend-final-p3gk.onrender.com/api';
+  const API_BASE_URL = 'https://project-backend-final-1.onrender.com';
 
   useEffect(() => {
     const token = localStorage.getItem('userToken');
