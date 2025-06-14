@@ -26,7 +26,7 @@ const CreateEquipmentPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  const API_BASE_URL = 'https://project-backend-final-1.onrender.com';
+  const API_BASE_URL = 'https://project-backend-final-2.onrender.com/api'; // Remplacez par l'URL de votre API
 
   // Redirection si non authentifié ou non admin
   useEffect(() => {

@@ -62,7 +62,7 @@ const EquipmentDetailPage: React.FC = () => {
   const [newMaintenanceNotes, setNewMaintenanceNotes] = useState('');
   const [addingMaintenance, setAddingMaintenance] = useState(false);
 
-  const API_BASE_URL = 'https://project-backend-final-1.onrender.com';
+  const API_BASE_URL = 'https://project-backend-final-2.onrender.com/api'; // Remplacez par l'URL de votre API
 
   const fetchEquipmentAndMaintenance = useCallback(async () => {
     if (!isAuthenticated || !id) {

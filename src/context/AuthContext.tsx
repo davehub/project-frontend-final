@@ -36,7 +36,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [user, setUser] = useState<{ username: string; role: 'admin' | 'user' } | null>(null);
 
-  const API_BASE_URL = 'https://project-backend-final-1.onrender.com';
+  const API_BASE_URL = 'https://project-backend-final-2.onrender.com/api'; // Remplacez par l'URL de votre API
 
   useEffect(() => {
     const token = localStorage.getItem('userToken');
