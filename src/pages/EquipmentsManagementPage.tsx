@@ -41,7 +41,7 @@ const EquipmentsManagementPage: React.FC = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
 
-  const API_BASE_URL = 'https://project-backend-final-2.onrender.com/api'; // Remplacez par l'URL de votre API
+  const API_BASE_URL = 'https://project-backend-final-3.onrender.com/api'; // Remplacez par l'URL de votre API
 
   // Fonction pour récupérer la liste des utilisateurs (pour le filtre assignedTo)
   const fetchUsers = useCallback(async () => {
