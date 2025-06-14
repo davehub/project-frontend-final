@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import 'material-icons/iconfont/material-icons.css';
 
 interface IUser {
   _id: string;
